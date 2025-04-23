@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Loading.css">
+    <link rel="stylesheet" href="css/homestyle.css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <!-- <script src="../js/Loading.js"></script> -->
+    <title>sukiSophie's home</title>
+    <!-- 预加载关键图片 -->
+    <link rel="preload" href="image/head.png" as="image">
+    <link rel="preload" href="image/about.jpg" as="image">
+    <link rel="preload" href="image/blog.jpg" as="image">
+    <link rel="preload" href="image/album.jpg" as="image">
+    <link rel="preload" href="image/join.jpg" as="image">
+</head>
+
+<body>
+    <script type="text/javascript">
+		window.onload = function(){
+			var config = {
+				vx: 4,
+				vy:  4,
+				height: 2,
+				width: 2,
+				count: 100,
+				color: "121, 162, 185",
+				stroke: "180, 140, 230",
+				dist: 6000,
+				e_dist: 20000,
+				max_conn: 10
+			}
+			CanvasParticle(config);
+		}
+	</script>
+	<script type="text/javascript" src="./js/canvas-particle.js"></script>
+    <div id="canvas-particle"></div>
+    <div class="nav-trigger"></div>
+    <nav class="homenav">
+        <div class="navtitle"><strong>sukiSophie</strong>|MY PROFILE</div>
+        <a href="index.html">HOME</a>
+        <a href="html/about.html">ABOUT</a>
+        <a href="html/blog.html">BLOG</a>
+        <a href="html/album.html">ALBUM</a>
+        <a href="html/join.html">JOIN</a>
+        <div class="navanim home"></div>
+        <div class="none"></div>
+    </nav>
+    <main class="main">
+        <section class="sec">
+            <div class="titleimg">
+                <div class="title">
+                    <span id="text"></span><span>|</span>
+                </div>
+
+            </div>
+        </section>
+        <section class="sec">
+            <a href="html/about.html">
+                <div class="part1 pt">
+                    <div class="imghid">
+                        <div class="img"></div>
+                    </div>
+                    <div class="txt">
+                        <p>关山万里梦难成,</p>
+                        <p>于世浮沉几度惊.</p>
+                        <p>自有诗书藏陋室,</p>
+                        <p>己心明月照前程.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="html/blog.html">
+                <div class="part2 pt">
+                    <div class="txt">
+                        <p>博览群书意未休,</p>
+                        <p>文章千古事悠悠.</p>
+                        <p>载笔常怀天下志,</p>
+                        <p>道心一片写春秋.</p>
+                    </div>
+                    <div class="imghid">
+                        <div class="img2"></div>
+                    </div>
+                </div>
+            </a>
+            <a href="html/album.html">
+                <div class="part3 pt">
+                    <div class="imghid">
+                        <div class="img"></div>
+                    </div>
+                    <div class="txt">
+                        <p>碎语闲言记此身,</p>
+                        <p>碎红零落又逢春.</p>
+                        <p>念来皆是寻常事,</p>
+                        <p>念罢方知意最真.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="html/join.html">
+                <div class="part4 pt">
+                    <div class="txt">
+                        <p>联心万里若比邻,</p>
+                        <p>系念千般寄此身.</p>
+                        <p>方寸荧屏传暖意,</p>
+                        <p>式微时节见情真.</p>
+                    </div>
+                    <div class="imghid">
+                        <div class="img2"></div>
+                    </div>
+                </div>
+            </a>
+        </section>
+        <footer class="foot">
+            <p>@2025 | sukiSophie</p>
+            <p>只想当一个平凡的人诶</p>
+            <p>睡觉是最舒服的事情，没有之一</p>
+        </footer>
+
+    </main>
+    <script src="js/title.js"></script>
+    <script src="js/imageLoader.js"></script>
+</body>
+
+</html>
