@@ -10,7 +10,8 @@
     top: 0px;
     height: 250px;
     width: 100%;
-    background-image: url("../image/headimg2.jpg");
+    background-color: #f0f0f0; /* 添加占位背景色 */
+    background-image: none; /* 初始不加载图片 */
     background-size: 1540px;
     background-repeat: no-repeat;
     background-position-y: -150px;
@@ -18,6 +19,10 @@
     overflow: hidden;
     border-bottom: 5px solid rgb(58, 83, 85);
     animation: headload 0.9s linear;
+}
+
+.headimg.loaded {
+    background-image: url("../image/headimg2.jpg");
 }
 .headimg h1{
     color: rgb(92, 136, 177);

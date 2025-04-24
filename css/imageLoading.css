@@ -1,38 +1,52 @@
-/* 图片加载优化样式 */
+/* 图片加载中的样式 */
 .img-loading {
     position: relative;
     overflow: hidden;
 }
 
 .img-loading::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, #f0f0f0 0%, #f8f8f8 50%, #f0f0f0 100%);
-    background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
+    background-color: #f0f0f0;
+    z-index: 1;
 }
 
-@keyframes shimmer {
+.img-loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ccc;
+    border-top-color: #3498db;
+    border-radius: 50%;
+    z-index: 2;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+/* 图片加载完成后的淡入效果 */
+.lazy-image, .lazy-background {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.lazy-image.loaded, .lazy-background.loaded {
+    opacity: 1;
+}
+
+@keyframes spin {
     0% {
-        background-position: -200% 0;
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     100% {
-        background-position: 200% 0;
+        transform: translate(-50%, -50%) rotate(360deg);
     }
-}
-
-/* 图片淡入效果 */
-.lazy-image {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.lazy-image.loaded {
-    opacity: 1;
 }
 
 /* 背景图片懒加载样式 */
