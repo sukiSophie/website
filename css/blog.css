@@ -89,7 +89,7 @@
 
 .con .txt {
     width: 400px;
-    padding: 0 40px;
+    padding: 48px 40px;
     color: rgb(25, 39, 49);
     font-family: "仿宋";
     font-size: 22px;
@@ -101,38 +101,42 @@
 }
 
 .pri {
-    height: 500px;
+    height: 800px;
     width: 300px;
     float: right;
     clear: right;
     position: fixed;
-    margin-top: -676px;
+    margin-top: -508px;
     margin-left: 1100px;
     animation: priload 2s linear;
 }
 
 .pri .prihead {
-    height: 250px;
-    background-color: rgb(229, 239, 243);
+    height: 360px;
+    background-color: rgba(95, 84, 160, 0.8);
     border-radius: 20px;
     padding-top: 18px;
     box-shadow: 0 0 8px rgba(39, 69, 88, 0.6);
+}
+
+.pri .prehead h2 {
+    color:rgb(109, 166, 168);
 }
 
 .prihead a {
     display: block;
     overflow: hidden;
     border-radius: 50%;
-    width: 90px;
-    margin: auto;
+    width: 120px;
+    margin: 20px auto;
     border: 3px groove rgb(35, 82, 121);
 }
 
 .pri .prihead .tx {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    background-image: url("../image/tx.png");
+    background-image: url("../image/tx.jpg");
     background-size: cover;
     transition: 0.5s ease 0s;
 }

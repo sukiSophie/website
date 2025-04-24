@@ -4,7 +4,7 @@
     width: 100vw;
 } 
 
-.banner{
+/* .banner{
     list-style: none;
     position: absolute;
     padding: 0;
@@ -45,6 +45,50 @@
     background: rgb(123, 168, 175);
     float: left;
     bottom: -100px;
+} */
+
+.square{
+    width: 250px;
+    height: 250px;
+    border: 5px solid rgb(183, 207, 226);
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 30%;
+    animation: a1 3s infinite linear;
+}
+
+.square::before{
+    content: "";
+    width: 250px;
+    height: 250px;
+    transform: rotate(30deg);
+    border: 5px solid rgb(183, 207, 226);
+    border-radius: 40%;
+    position: absolute;
+    animation: a2 25s infinite linear;
+}
+
+.square::after{
+    content: "";
+    width: 250px;
+    height: 250px;
+    transform: rotate(60deg);
+    border: 5px solid rgb(183, 207, 226);
+    border-radius: 30%;
+    position: absolute;
+    animation: a2 60s infinite linear;
+}
+
+.square:hover{
+    animation: a1 15s infinite linear;
+}
+
+.square:hover::before{
+    animation: a2 80s infinite linear;
+}
+
+.square:hover::after{
+    animation: a1 50s infinite linear;
 }
 
 @keyframes imgload1{
@@ -54,5 +98,16 @@
     }100%{
         opacity: 1;
         margin-top: 170px;
+    }
+}
+@keyframes a1{
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes a2{
+    to{
+        transform: rotate(-10800deg
+        );
     }
 }
